@@ -6,7 +6,9 @@ Link naar de game site: [JS Flappy Bird game](https://sf-duijkersloot.github.io/
 
 *Note: Browser zal wel vragen om toestemming voor de microfoon. Dit is niet noodzakelijk om de game te spelen, maar maakt het wel extra leuk :)*
 
-<hr>
+<>
+
+#### 🏆 Dit project was genomineerd voor de CMD Golden Dot awards 2023<hr>
 
 ## De opdracht
 Deze game is gemaakt voor mijn schoolvak: **Inleiding Programmeren**
@@ -14,10 +16,22 @@ Deze game is gemaakt voor mijn schoolvak: **Inleiding Programmeren**
 Tijdens dit vak was ik bezig met het maken van een vanilla javascript game.
 
 
-### Proces
-<details>
-  <summary> Proces details</summary>
-  
+### Werking van de game
+<details open>
+  <summary> Game werking details:</summary>
+  Je hebt 2 verschillende modes om de game te spelen:
+  <ul>
+   <li> <b>Audio Bar Height:</b> deze mode laat de vogel de hoogte aannemen op basis van het geluid volume dat je microfoon opneemt. 
+    <ul>
+    <li>Vb. Als de audio bar aan de linker kant halverwege "vol" is, dan zal de vogel op de helft van de hoogte zitten in het spel.</li>
+    </ul>
+   </li>
+   <li> <b>Threshold Jump:</b> in deze mode laat de vogel één keer springen als de geluid threshold wordt gehaald. 
+    <ul>
+    <li>Je hebt een upper en lower threshold, als het geluid boven de upper threshold komt dan zal de vogel springen. Vervolgens zal de jump "gereset" worden als het geluid onder de lower threshold komt, zonder dit zou de vogel continu blijven stijgen als het boven de threshold kwam, dit was niet mijn visie</li>
+    </ul>
+   </li>
+  </ul>
 </details>
 
 <hr>
