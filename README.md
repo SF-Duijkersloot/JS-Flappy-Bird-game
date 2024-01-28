@@ -1,4 +1,4 @@
-# Vanilla Javascript Flappy Bird game
+# Vanilla Javascript Flappy Bird game - Voice controlled
  ```javascript
 console.log("Flappy Bird game, maar met een twist: gebruik je microfoon om de game te besturen");
 ```
