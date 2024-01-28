@@ -33,7 +33,7 @@ Voor het vak **Inleiding Programmeren** kreeg ik de opdracht om een browsergame 
   <ul>
    <li>In deze mode laat de vogel één keer springen als de geluid threshold wordt gehaald. 
     <ul>
-    <li>Je hebt een upper en lower threshold, als het geluid boven de upper threshold komt dan zal de vogel springen. Vervolgens zal de jump "gereset" worden als het geluid onder de lower threshold komt, zonder dit zou de vogel continu blijven stijgen als het boven de threshold kwam, dit was niet mijn visie</li>
+    <li>Je hebt een upper en lower threshold, als het geluid boven de upper threshold komt dan zal de vogel springen. Vervolgens zal de jump "gereset" worden als het geluid onder de lower threshold komt, zonder dit zou de vogel continu blijven stijgen als het boven de threshold kwam, dit was niet mijn visie (de thresholds kan je aanpassen met de sliders)</li>
     </ul>
    </li>
   </ul>
