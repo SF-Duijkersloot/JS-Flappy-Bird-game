@@ -6,37 +6,42 @@ Link naar de game site: [JS Flappy Bird game](https://sf-duijkersloot.github.io/
 
 *Note: Browser zal wel vragen om toestemming voor de microfoon. Dit is niet noodzakelijk om de game te spelen, maar maakt het wel extra leuk :)*
 
-<>
+<hr>
 
-#### 🏆 Dit project was genomineerd voor de CMD Golden Dot awards 2023<hr>
+### 🏆 Dit project was genomineerd voor de CMD Golden Dot awards 2023 | [Link naar nominatie](https://cmd-amsterdam.nl/portfolio/flappy-bird-voice-controlled/)
+
+<hr>
 
 ## De opdracht
-Deze game is gemaakt voor mijn schoolvak: **Inleiding Programmeren**
-
-Tijdens dit vak was ik bezig met het maken van een vanilla javascript game.
+Voor het vak **Inleiding Programmeren** kreeg ik de opdracht om een browsergame te ontwikkelen, zoals een Tamagotchi-game of bijvoorbeeld een Snake game. De enige vereiste was dat de game volledig gebouwd moest worden met vanilla JavaScript.
 
 
 ### Werking van de game
-<details open>
-  <summary> Game werking details:</summary>
   Je hebt 2 verschillende modes om de game te spelen:
+  <details>
+   <summary><b>Audio Bar Height</b></summary>
   <ul>
-   <li> <b>Audio Bar Height:</b> deze mode laat de vogel de hoogte aannemen op basis van het geluid volume dat je microfoon opneemt. 
+   <li>Deze mode laat de vogel de hoogte aannemen op basis van het geluid volume dat je microfoon opneemt. 
     <ul>
     <li>Vb. Als de audio bar aan de linker kant halverwege "vol" is, dan zal de vogel op de helft van de hoogte zitten in het spel.</li>
     </ul>
    </li>
-   <li> <b>Threshold Jump:</b> in deze mode laat de vogel één keer springen als de geluid threshold wordt gehaald. 
+  </ul>
+  </details>
+  <details>
+   <summary><b>Threshold Jump</b></summary>
+  <ul>
+   <li>In deze mode laat de vogel één keer springen als de geluid threshold wordt gehaald. 
     <ul>
     <li>Je hebt een upper en lower threshold, als het geluid boven de upper threshold komt dan zal de vogel springen. Vervolgens zal de jump "gereset" worden als het geluid onder de lower threshold komt, zonder dit zou de vogel continu blijven stijgen als het boven de threshold kwam, dit was niet mijn visie</li>
     </ul>
    </li>
   </ul>
-</details>
+  </details>
 
 <hr>
 
 ## Resultaat
-Wat begon als een idee voor een simpel flappy bird game, werd zo veel meer. Ik had al redelijk snel door dat ik de basis game kon afmaken in de eerste helft van mijn vak, maar ik besloot toch om door te gaan. Dit dan ook mijn favoriete vak van mijn Propedeuse jaar. Ik had nog nooit iets soortgelijk als dit gemaakt, maar ik heb ontdekt dat hier wel mijn passie ligt, het coderen op het front end gebied.
+Tijdens het vak Inleiding Programmeren heb ik met mijn beperkte ervaring in JavaScript de bekende Flappy Bird-game ontwikkeld voor browsers. Na het maken van de basisgame, voelde ik dat er iets ontbrak, gezien het spel al vaak genoeg is gemaakt. Om het interessanter te maken, heb ik besloten om een interactief element toe te voegen: een besturing met je stem. Deze functie kan eenvoudig worden in- en uitgeschakeld, zodat spelers kunnen kiezen tussen stembesturing en de reguliere bediening. De stembesturing werkt eenvoudig: hoe harder het geluid, hoe hoger je vliegt. Houd er rekening mee dat dit tot nieuwsgierige blikken van omstanders kan leiden. Ik neem hiervoor geen verantwoordelijkheid. Aan het einde van het vak was ik trots op het resultaat, vooral omdat dit mijn eerste ervaring met JavaScript was. Ik heb echt ontzettend genoten van dit project, ook al heeft het me flink wat uren gekost!
 
 ### Cijfer: 10
