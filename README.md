@@ -4,7 +4,8 @@ console.log("Flappy Bird game, maar met een twist: gebruik je microfoon om de ga
 ```
 Link naar de game site: [JS Flappy Bird game](https://sf-duijkersloot.github.io/JS-Flappy-Bird-game/)
 
-*Note: Browser zal wel vragen om toestemming voor de microfoon. Dit is niet noodzakelijk om de game te spelen, maar maakt het wel extra leuk :)*
+###### *Note : Browser zal wel vragen om toestemming voor de microfoon. Dit is niet noodzakelijk om de game te spelen, maar maakt het wel extra leuk :)*
+###### *Note<sup>2</sup> : De game speed kan wat langzaam zijn, de pipes worden gemaakt om de 200 frames. Als het langzaam runned, komt het door een iets lagere fps, mijn excuses daarvoor*
 
 <hr>
 
