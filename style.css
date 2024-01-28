@@ -1,0 +1,303 @@
+:root {
+  --display-none: none;
+  --display-new-none: none;
+  --display-slider-none: none;
+  --visualiser-bar: 0%;
+  --upper-hr-bottom: 0%;
+  --lower-hr-bottom: 0%;
+  --medal-opacity: 30%;
+  --display-slider: block;
+}
+*, ::before, ::after {
+  font-family: "PressStart2P", sans-serif;
+  font-size: .85em;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+/* Google Font van: https://fonts.google.com/specimen/Press+Start+2P?preview.text=SCORE:%20120!!!&preview.text_type=custom */
+@font-face {
+  font-family: "PressStart2P";
+  src: url(./Fonts/PressStart2P-Regular.ttf);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  background-image: linear-gradient(to right, #f6fbff, #fff3ea);
+}
+
+/* =======-----===== Main code styling =====-----======= */
+
+/* background image van: https://www.reddit.com/r/wallpaper/comments/bm3u8v/pixel_art_1920_x_1080/ */
+canvas {
+  display: block;
+  background-image: url(./Images/8bit-background.png);
+  background-size: 140%;
+  background-position-y: -5em;
+  border: 1px solid black;
+}
+.game-container {
+  position: relative;
+}
+/* =======----- Gameover popup screen -----======= */
+.gameover-message {
+  position: absolute;
+  font-size: 2em;
+  top: 150px;
+  left: 50%;
+  width: 40%;
+  height: 30%;
+  transform: translateX(-50%);
+  display: var(--display-none);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "medal score"
+    "medal best";
+  text-align: center;
+  z-index: 1;
+  background-color: #6c8099;
+  color: #fff;
+  padding: 2em;
+  border: 3px solid #fff3ea;
+  border-radius: .75em;
+}
+.gameover-message > p {
+  color: #fff8f0;
+}
+.gameover-message p:nth-of-type(1) {
+  grid-area: medal;
+  text-align: left;
+}
+.gameover-message img:nth-of-type(2) {
+  position: relative;
+  grid-area: medal;
+  width: 5em;
+  top: 3em;
+  opacity: var(--medal-opacity);
+}
+.gameover-message p:nth-of-type(2) {
+  grid-area: score;
+  text-align: right;
+}
+.current-score {
+  position: relative;
+  top: .4em;
+  font-size: 2em;
+  color: white;
+}
+.best-score {
+  position: relative;
+  top: .4em;
+  font-size: 2em;
+  color: white;
+}
+.gameover-message h2 {
+  grid-area: best;
+  position: absolute;
+  left: 2.2em;
+  top: -.15em;
+  font-size: .8em;
+  font: 100;
+  padding: .2em;
+  background-color: red;
+  display: var(--display-new-none);
+}
+.gameover-message p:nth-of-type(3) {
+  grid-area: best;
+  text-align: right;
+}
+.gameover-message img:first-of-type {
+  position: absolute;
+  width: 22em;
+  top: -7em;
+  margin-left: 2.5em;
+  filter: hue-rotate(0.54turn) saturate(75%);
+}
+
+.gameover-message button {
+  position: absolute;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  bottom: -7em;
+  width: 10em;
+  height: 4.5em;
+  border-radius: .5em;
+  background-color: #fff3ea;
+  color: #334760
+}
+
+.gameover-message {
+  display: none;
+}
+
+.gameover-show {
+  display: grid !important;
+}
+/* =======-----=====------=====-----======= */
+
+/* =======-----=====-------------=====-----======= */
+
+/* =======-----===== Visualiser voor audio =====-----======= */
+.level-visualizer {
+  background-color: #93a0af;
+  position: absolute;
+  width: 100px;
+  height: 518px;
+  right: 18em;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  display: flex;
+  align-items: end;
+  margin-left: 53em;
+}
+
+.Microphone {
+  position: absolute;
+  width: 3em;
+  margin-top: 61em;
+  margin-left: 106em;
+}
+.left-microphone {
+  margin-left: -106em !important;
+}
+.left-position {
+  margin-left: -53em !important;
+}
+.inner-visualizer-bar {
+  height: var(--visualiser-bar);
+  width: 100%;
+  background-color: #334760;
+}
+
+.upper-slider {
+  position: absolute;
+  width: 90%;
+  color: white;
+  border: 5px solid white;
+  bottom: var(--upper-hr-bottom);
+  display: var( --display-slider-none);
+  border-color: rgb(113, 210, 44);
+}
+.lower-slider {
+  position: absolute;
+  width: 90%;
+  color: white;
+  border: 5px solid white;
+  bottom: var(--lower-hr-bottom);
+  display: var( --display-slider-none);
+  border-color: rgb(236, 101, 80);
+}
+
+.ThresholdUpper {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  margin-left: 67em;
+  margin-top: 20em;
+  display: var(--display-slider);
+  accent-color: rgb(113, 210, 44);
+}
+
+.ThresholdLower {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  margin-left: 67em;
+  margin-top: 24em;
+  display: var(--display-slider);
+  accent-color: rgb(236, 101, 80);
+}
+/* =======-----=====-------------=====-----======= */
+
+/* =======----- Button fix audio -----======= */
+.audio-button {
+  position: absolute;
+  bottom: 5em;
+  background-color: #334760;
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+}
+/* =======-----=====------=====-----======= */
+
+/* =======-----===== Slider toggle modes =====-----======= */
+.slider-container {
+  position: absolute;
+  top: 2em;
+  display: flex;
+  width: 40em;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+}
+
+.slider-container h2:nth-of-type(1) {
+  color: #334760;
+}
+.slider-container h2:nth-of-type(2) {
+  color: #2196F3;
+}
+.toggle-slider {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-slider input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #334760;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+/* =======-----=====-------------=====-----======= */

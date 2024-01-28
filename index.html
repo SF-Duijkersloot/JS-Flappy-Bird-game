@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Flappy Bird</title>
+</head>
+<body>
+  <!-- Audio level visualiser -->
+  <div class="level-visualizer">
+    <hr class="upper-slider">
+    <hr class="lower-slider">
+    <div class="inner-visualizer-bar"></div>
+  </div>
+
+  <img class="Microphone" src="./Images/microphone.png" alt="8bit microphone">
+
+  <input class="ThresholdUpper" type="range" min="0" max="100" step="5" value="35" />
+  <input class="ThresholdLower" type="range" min="0" max="100" step="5" value="30"/>
+  <!----------------------------->
+
+  <!-- Toggle between 2 audio modes -->
+  <div class="slider-container">
+    <h2>Audio Bar Height</h2>
+    <label class="toggle-slider">
+      <input id="checkbox" type="checkbox" checked>
+      <span class="slider"></span>
+    </label>
+    <h2>Threshold Jump</h2>
+  </div>
+  <!--------------------------------->
+
+  <!-- Game canvas -->
+  <div class="game-container">
+    <canvas class="canvas" width="900" height="550" style="border: 1px solid black;"></canvas>
+    
+    <!-- Gameover popup message -->
+    <div class="gameover-message">
+      <!-- Image van: https://www.pngitem.com/middle/ibooRTo_background-flappy-bird-game-over-hd-png-download/-->
+      <img src="./Images/GameOver.png" alt="Flappy bird game over message">
+      <p>MEDAL</p>
+      <img class="medal-image" src="./Images/medal_platinum.png" alt="placeholder for medal">
+      <p>SCORE <br><span class="current-score"></span></p>
+      <h2>NEW!</h2>
+      <p>BEST <br><span class="best-score"></span></p>
+      <button class="restartButton">Restart</button>
+    </div>
+
+  </div>
+  
+  <!-- Button to fix audio -->
+  <button class="audio-button">FIX AUDIO</button>
+  
+  <script src="flappybird.js"></script>
+</body>
+</html>
